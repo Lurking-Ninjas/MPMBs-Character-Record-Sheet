@@ -1,0 +1,46 @@
+var iFileName = "Barbarian - Path of the Warden [NotTheSmoooze's work, transcribed by Lurking_Ninjas]"; // Transcribed by u/Lurking_Ninjas
+RequiredSheetVersion(12.999); 
+
+SourceList["NTS:PotW"] = {
+	name : "NotTheSmoooze: Path of the Warden",
+	abbreviation : "NTS:PotW",
+	group : "u/NotTheSmoooze",
+	url : "https://drive.google.com/file/d/1luKf8XuoZz_YzMsWK3rZsq6E6cQvFyAn/view?usp=sharing",
+	date : "07/03/2021"
+};
+
+AddSubClass("barbarian", "Path of the Warden", { 
+		regExpSearch : /^(?=.*warden).*$/i,
+		subname : "Path of the Warden",
+		source : ["NTS:PotW", 0],
+		fullname : "The Warden",
+		features : {
+
+			"subclassfeature3" : {
+				name : "Warden's Rage",
+				source : ["NTS:PotW", 0],
+				minlevel : 3,
+				description : "\n   " + "While raging and wielding a shield when an ally I can see within 30 feet is attacked" + "\n   " + "I can move half my speed without provoking opportunity attacks towards them and" + "\n   " + "I become the target of that attack if I end the move within 5 feet of the attacker",
+			    action : ["Reaction",],
+			},
+			"subclassfeature6" : {
+				name : "Unflinching Defence",
+				source : ["NTS:PotW", 0],
+				minlevel : 6,
+				description : "\n   " + "I can't be knocked prone or moved against my will while raging and wielding a shield" + "\n   " + "When I use Warden's Rage to become the target I gain resistance to that damage",
+			},
+			"subclassfeature10" : {
+				name : "Shield Charge",
+				source : ["NTS:PotW", 0],
+				minlevel : 10,
+				description : "\n   " + "If I move 10 feet towards a creature and attack it makes (DC 10 + Prof + Str mod) save" + "\n   " + "or be pushed 10 feet directly away if the target impacts a surface it takes 2d6 Bludgeon.",
+			},
+			"subclassfeature14" : {
+				name : "Warden's Fury",
+				source : ["NTS:PotW", 0],
+				minlevel : 14,
+				description : "\n   " + "Whenever I use Warden's Rage to become the target I can make a melee weapon attack",
+			},
+		}
+	}
+);
